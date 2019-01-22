@@ -16,8 +16,7 @@
             name: { required: true },
             prefix: { default: '' },
             suffix: { default: '' },
-            isDisabled:{ default: false },
-            fullURL:
+            isDisabled:{ default: false }
         },
 
         data: () => ({
