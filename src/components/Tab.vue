@@ -17,6 +17,7 @@
             prefix: { default: '' },
             suffix: { default: '' },
             isDisabled:{ default: false },
+            fullURL:
         },
 
         data: () => ({
@@ -37,8 +38,8 @@
                 if (this.isDisabled) {
                     return '#';
                 }
-
-                return '#' + this.computedId;
+                //fix baseurl if exists in body
+                return location.href.split(/\?|#/)[0]+'#' + this.computedId;
             },
         },
     };
